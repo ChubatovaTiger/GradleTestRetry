@@ -12,14 +12,15 @@ public class MyTest {
 
     @Test
     public void test42s() {
-        // Read system property
-        String failTest = System.getProperty("failTest", "false");
+        // Get the property
+        String buildName = System.getProperty("buildName", "");
 
-        if (Boolean.parseBoolean(failTest)) {
-            Assert.fail("Test failed because failTest=true");
+        // Fail if it equals "Build 1"
+        if ("Build 1".equals(buildName)) {
+            Assert.fail("Failing test because buildName == 'Build 1'");
         }
 
-        // Otherwise, the test passes
-        System.out.println("Test passed!");
+        // Otherwise test passes
+        System.out.println("Test passed, buildName=" + buildName);
     }
 }
