@@ -1,7 +1,5 @@
 plugins {
     id("java")
-    //id("org.gradle.test-retry") version "1.6.4"
-    
 }
 
 
@@ -16,28 +14,9 @@ dependencies {
 test {
     useJUnit()
     ignoreFailures = false
-    filter {
-    //excludeTestsMatching "*mytest*"
- }
-    //retry {
-     //   maxRetries = 2
-     //   maxFailures = 20
-      //  failOnPassedAfterRetry = false
-    //}
 }
 
-task hello {
-    doLast {
-        println providers.systemProperty("teamcity.version").present
-        println(providers.systemProperty("teamcity.version").get())
-        //println project.ext["teamcity.build.branch"]
-    }
-}
-
-task upper(dependsOn: hello){
-    doLast {
-        String someString = 'mY_nAmE'
-        println "Original: " + someString
-        println "Upper case: " + someString.toUpperCase()
-    }
+tasks.withType(Test).configureEach {
+    // Example: pass a property "failTest"
+    systemProperty("failTest", project.findProperty("failTest") ?: "true")
 }
