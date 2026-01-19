@@ -12,7 +12,7 @@ public class mytest10 {
         if (System.currentTimeMillis()%2==1){
         }
         else {
-           // Assert.fail("fb");
+           // Assert.fail("fails with probability 50%");
 
         };
 
@@ -20,10 +20,10 @@ public class mytest10 {
     
     @Test
     public void test42s() {
-        if (System.currentTimeMillis()%1==1){
-            Assert.fail("fail mkk_remote2");
 
-    };
+            Assert.fail("always fails");
+
+
     }
 
 
