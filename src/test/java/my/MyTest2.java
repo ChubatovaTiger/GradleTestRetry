@@ -10,17 +10,16 @@ import org.junit.Test;
 
 public class MyTest2 {
 
-    @Test
+@Test
     public void test42s() {
-        // Get the property
-        String buildName = System.getProperty("failTest", "");
+        // Read system property
+        String failTest = System.getProperty("failTest", "false");
 
-        // Fail if it equals "Build 1"
-        if ("Build 1".equals(buildName)) {
-            Assert.fail("Failing test because buildName == 'Build 1'");
+        if (Boolean.parseBoolean(failTest)) {
+            Assert.fail("Test failed because failTest=true");
         }
 
-        // Otherwise test passes
-        System.out.println("Test passed, buildName=" + buildName);
+        // Otherwise, the test passes
+        System.out.println("Test passed!");
     }
 }
