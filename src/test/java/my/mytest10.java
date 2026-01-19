@@ -20,12 +20,8 @@ public class mytest10 {
     
     @Test
     public void test42s() {
-        //if (System.currentTimeMillis()%3==1){
-        //}
-        //else {
-            //Assert.fail("fail mkk_remote2");
-
-        //};
+        if (System.currentTimeMillis()%1==1){
+            Assert.fail("fail mkk_remote2");
 
     };
         @Test
