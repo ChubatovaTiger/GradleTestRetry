@@ -4,7 +4,7 @@ import junit.framework.TestCase;
 import org.junit.Assert;
 import org.junit.Test;
 import java.lang.*;
-//haha
+
 public class mytest10 {
 
     @Test
@@ -24,14 +24,8 @@ public class mytest10 {
             Assert.fail("fail mkk_remote2");
 
     };
-        @Test
-    public void test43s() {
+    }
 
-            //Assert.fail("fail mkk_remote2");
-
-
-
-    };
 
 
 }
