@@ -13,7 +13,7 @@ public class MyTest {
     @Test
     public void test42s() {
         // Get the property
-        String buildName = System.getProperty("buildName", "");
+        String buildName = System.getProperty("failTest", "");
 
         // Fail if it equals "Build 1"
         if ("Build 1".equals(buildName)) {
