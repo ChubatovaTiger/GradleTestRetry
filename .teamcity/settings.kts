@@ -61,15 +61,12 @@ object Build : BuildType({
         }
     }
 
-    failureConditions {
-        supportTestRetry = true
-    }
-
     features {
         perfmon {
         }
         parallelTests {
             numberOfBatches = 3
+            groupArtifactsByBuild = false
         }
     }
 })
