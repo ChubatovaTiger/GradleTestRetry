@@ -12,7 +12,7 @@ public class mytest10 {
         if (System.currentTimeMillis()%2==1){
         }
         else {
-           // Assert.fail("fails with probability 50%");
+            Assert.fail("fails with probability 50%");
 
         };
 
