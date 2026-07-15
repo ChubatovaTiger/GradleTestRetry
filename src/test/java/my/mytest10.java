@@ -4,6 +4,10 @@ import junit.framework.TestCase;
 import org.junit.Assert;
 import org.junit.Test;
 import java.lang.*;
+import junit.framework.TestCase;
+import org.junit.Assert;
+import org.junit.Test;
+import java.lang.*;
 
 public class mytest10 {
 
@@ -13,6 +17,7 @@ public class mytest10 {
         }
         else {
             Assert.fail("fails with probability 50%");
+                    try{Thread.sleep(60);}catch(InterruptedException e){System.out.println(e);}
 
         };
 
