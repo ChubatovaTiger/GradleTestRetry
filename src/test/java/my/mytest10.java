@@ -22,14 +22,6 @@ public class mytest10 {
         };
 
     };
-    
-    @Test
-    public void test42s() {
-
-            //Assert.fail("always fails");
-
-
-    }
 
 
 
